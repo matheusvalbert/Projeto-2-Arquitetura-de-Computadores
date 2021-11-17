@@ -14,7 +14,8 @@ ENTITY CONTROL IS
 		load_reg_inst	: OUT	STD_LOGIC;
 		set_addr			: OUT	STD_LOGIC;
 		next_pc			: OUT	STD_LOGIC;
-		jmp_out			: OUT STD_LOGIC
+		jmp_out			: OUT STD_LOGIC;
+		beq_load			: OUT STD_LOGIC
 	);
 END ENTITY;
 
@@ -68,7 +69,7 @@ BEGIN
 	BEGIN
 		IF(Reset = '1') THEN --reset e estado inicial = initReg
 			state <= initReg;
-		ELSIF (rising_edge(Clock)) THEN -- borda de subida muda de estado
+		ELSIF (falling_edge(Clock)) THEN -- borda de descida muda de estado
 			state <= next_state;
 		END IF;
 	END PROCESS;
@@ -77,7 +78,7 @@ BEGIN
 	
 	next_pc <= '1' WHEN state = fetch OR (state = decode AND inst = "10") ELSE '0'; -- proximo pc, quando estado = fetch ou decode (caso a instrucao seja beq)
 	
-	load_reg_inst <= '1' WHEN state = fetch OR (state = decode AND inst = "10") ELSE '0'; -- escreve no reg. instrucao quando for fetch ou decode (caso a instrucao seja beq)
+	load_reg_inst <= '1' WHEN state = fetch ELSE '0'; -- escreve no reg. instrucao quando for fetch
 	
 	set_a_b <= '1' WHEN state = decode ELSE '0'; -- set regA e regB, carrega registradores para a alu para ser executado no proximo ciclo
 	
@@ -90,5 +91,7 @@ BEGIN
 	set_addr <= '1' WHEN state = beq ELSE '0'; -- sinal de instrucao tipo beq
 	
 	jmp_out <= '1' WHEN state = jmp ELSE '0'; -- sinal de instrucao tipo jmp
+	
+	beq_load <= '1' WHEN state = decode AND inst = "10" ELSE '0'; -- guarda o valor no qual ira ser utilizado no beq caso seja taken
 
 END ARCHITECTURE;

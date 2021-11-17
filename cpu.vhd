@@ -4,8 +4,10 @@ USE IEEE.std_logic_1164.all;
 ENTITY CPU IS
 	PORT (
 		Clk			 : 	IN 	STD_LOGIC; -- clk
+		reset_s		 :		IN 	STD_LOGIC;
 		pc_out		 :  	OUT	STD_LOGIC_VECTOR(7 downto 0); -- debug pc
 		reg_inst_out : 	OUT	STD_LOGIC_VECTOR(7 downto 0); -- debug reg. inst.
+		reg_beq_out	 :		OUT	STD_LOGIC_VECTOR(7 downto 0);
 		reg0			 : 	OUT	STD_LOGIC_VECTOR(7 downto 0); -- debug reg0
 		reg1			 : 	OUT	STD_LOGIC_VECTOR(7 downto 0); -- debug reg1
 		reg2			 : 	OUT	STD_LOGIC_VECTOR(7 downto 0); -- debug reg2
@@ -15,7 +17,6 @@ END ENTITY;
 
 ARCHITECTURE RTL OF CPU IS
 
-	SIGNAL reset_s			: STD_LOGIC;
 	SIGNAL alu_op			: STD_LOGIC := '0';
 	
 	SIGNAL set_regs		: STD_LOGIC;
@@ -29,6 +30,7 @@ ARCHITECTURE RTL OF CPU IS
 	SIGNAL beq				: STD_LOGIC;
 	SIGNAL jmp				: STD_LOGIC;
 	SIGNAL make_jmp		: STD_LOGIC;
+	SIGNAL load_beq		: STD_LOGIC;
 	
 	SIGNAL A_out, B_out			: STD_LOGIC_VECTOR(7 downto 0);
 	SIGNAL result					: STD_LOGIC_VECTOR(7 downto 0);
@@ -38,6 +40,7 @@ ARCHITECTURE RTL OF CPU IS
 	SIGNAL instruction_exec 	: STD_LOGIC_VECTOR(7 downto 0);
 	SIGNAL A_in, B_in  			: STD_LOGIC_VECTOR(7 downto 0);
 	SIGNAL jmp_inst				: STD_LOGIC_VECTOR(7 downto 0);
+	SIGNAL beq_data				: STD_LOGIC_VECTOR(7 downto 0);
 	
 	COMPONENT CONTROL -- unidade de controle
 		PORT (
@@ -52,7 +55,8 @@ ARCHITECTURE RTL OF CPU IS
 			load_reg_inst	: OUT	STD_LOGIC;
 			set_addr			: OUT	STD_LOGIC;
 			next_pc			: OUT	STD_LOGIC;
-			jmp_out			: OUT STD_LOGIC
+			jmp_out			: OUT STD_LOGIC;
+			beq_load			: OUT STD_LOGIC
 		);
 	END COMPONENT;
 
@@ -122,7 +126,8 @@ BEGIN
 		load_reg_inst => write_inst,
 		set_addr => load_addr,
 		next_pc => load_pc,
-		jmp_out => jmp
+		jmp_out => jmp,
+		beq_load => load_beq
 	);
 
 	PC_0: PC -- pc
@@ -214,16 +219,28 @@ BEGIN
 		Load => load_alu_out,
 		Q => write_data
 	);
+	
+	REG_BEQ: REG8 -- reg BEQ (Auxiliar BEQ)
+	PORT MAP(
+		D => data_instruction,
+		data_set => "ZZZZZZZZ",
+		Reset1 => reset_s,
+		Clock1 => Clk,
+		set => '0',
+		Load => load_beq,
+		Q => beq_data
+	);
 
 	beq <= load_addr AND zero; -- beq condicional
 	
 	make_jmp <= beq OR jmp; -- escrita pc = regInst
 	
-	jmp_inst <= instruction_exec 																	WHEN beq = '1' -- caso regInst = beq
+	jmp_inst <= beq_data 																			WHEN beq = '1' -- caso regInst = beq
 			ELSE	adress_instruction(7 downto 6) & instruction_exec (5 downto 0)		WHEN jmp = '1' -- caso regInst = jmp
 			ELSE  "ZZZZZZZZ";
 			
 	pc_out <= adress_instruction; --debug pc
 	reg_inst_out <= instruction_exec; -- debug reg. instrucao
+	reg_beq_out <= beq_data; -- debug reg_beq
 	
 END ARCHITECTURE;

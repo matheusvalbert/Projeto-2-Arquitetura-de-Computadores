@@ -17,10 +17,12 @@ BEGIN
 	BEGIN
 		IF Reset1 = '1' THEN -- reset
 			Q <= "00000000";
-		ELSIF set = '1' THEN -- set reg8 inicializar registrador
-			Q <= data_set;
-		ELSIF rising_edge(Clock1) AND Load = '1' THEN
-			Q <= D;
+		ELSIF rising_edge(Clock1) THEN
+			IF Load = '1' THEN
+				Q <= D;
+			ELSIF set = '1' THEN -- set reg8 inicializar registrador
+				Q <= data_set;
+			END IF;
 		END IF;
 	END PROCESS;
 END ARCHITECTURE;
