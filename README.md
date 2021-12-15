@@ -105,7 +105,7 @@ Programa teste (arquivo: rom.vhd):
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initRegs_BEQ_not_taken.png" />
 </p>
 
-### ADD
+#### ADD
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/ADD.png" />
 </p>
