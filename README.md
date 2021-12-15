@@ -53,7 +53,7 @@ O estado initReg é utilizado para inicializar os registradores, pois não exist
 - Inicializar registrador:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initReg.png" />
+  <img width="30%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initReg.png" />
 </p>
 
 - Tipo R:
