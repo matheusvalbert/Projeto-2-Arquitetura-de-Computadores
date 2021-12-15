@@ -77,10 +77,10 @@ O estado initReg é utilizado para inicializar os registradores, pois não exist
 # Testes realizados
 
 Os valores iniciais dos registradores podem ser encontrados nas linhas 152 a 155 no arquivo 'cpu.vhd':
-- R0: 00000011
-- R1: 00000011
-- R2: 00110000
-- R3: 11000000
+- R0: 00000011 - decimal: 3
+- R1: 00000011 - decimal: 3
+- R2: 00110000 - decimal: 48
+- R3: 11000000 - decimal: 192
 
 Programa teste:
 ```
