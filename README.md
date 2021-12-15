@@ -13,7 +13,7 @@ Criar uma CPU multiciclo que realiza as seguintes instruções e seus opcodes:
 ### Formato das instruções
 
 <p align="center">
-  <img width="30% src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/instrucoes.png" />
+  <img width="30%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/instrucoes.png" />
 </p>
 
 - Tipo R:
