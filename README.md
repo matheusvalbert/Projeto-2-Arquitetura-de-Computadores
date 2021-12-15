@@ -82,7 +82,7 @@ Os valores iniciais dos registradores podem ser encontrados nas linhas 152 a 155
 - R2: 00110000 - decimal: 48
 - R3: 11000000 - decimal: 192
 
-Programa teste:
+Programa teste (arquivo: rom.vhd):
 ```
 (00) BEQ R2, R3, 00 (Não realiza o Jump)
 (01) POS 0001 0100 (20)
