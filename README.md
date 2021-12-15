@@ -19,19 +19,19 @@ Criar uma CPU multiciclo que realiza as seguintes instruções e seus opcodes:
 - Tipo R:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR.png" />
 </p>
 
 - Tipo Condicional:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoCOND.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoCOND.png" />
 </p>
 
 - Tipo  J:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJ.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJ.png" />
 </p>
 
 ### Máquina de estados
