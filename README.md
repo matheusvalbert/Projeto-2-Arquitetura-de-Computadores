@@ -13,25 +13,25 @@ Criar uma CPU multiciclo que realiza as seguintes instruções e seus opcodes:
 ### Formato das instruções
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/instrucoes.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/instrucoes.png" />
 </p>
 
 - Tipo R:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoR.png" />
 </p>
 
 - Tipo Condicional:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoCOND.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoCOND.png" />
 </p>
 
 - Tipo  J:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJ.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoJ.png" />
 </p>
 
 ### Máquina de estados
@@ -39,13 +39,13 @@ Criar uma CPU multiciclo que realiza as seguintes instruções e seus opcodes:
 O estado initReg é utilizado para inicializar os registradores, pois não existe uma instrução que permite adicionar um valor ao registrador.
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/maquina_de_estado.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/maquina_de_estado.png" />
 </p>
 
 ### CPU
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/cpu.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/cpu.png" />
 </p>
 
 ### Tabelas de sinais
@@ -53,25 +53,25 @@ O estado initReg é utilizado para inicializar os registradores, pois não exist
 - Inicializar registrador:
 
 <p align="center">
-  <img width="30%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initReg.png" />
+  <img width="30%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/initReg.png" />
 </p>
 
 - Tipo R:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoR_sig.png" />
 </p>
 
 - Tipo BEQ:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoBEQ_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoBEQ_sig.png" />
 </p>
 
 - Tipo JMP:
 
 <p align="center">
-  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJMP_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/tipoJMP_sig.png" />
 </p>
 
 # Testes realizados
@@ -102,31 +102,31 @@ Programa teste (arquivo: rom.vhd):
 
 #### Init Regs + BEQ (not taken)
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initRegs_BEQ_not_taken.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/initRegs_BEQ_not_taken.png" />
 </p>
 
 #### ADD
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/ADD.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/ADD.png" />
 </p>
 
 #### BEQ (taken)
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/BEQ_taken.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/BEQ_taken.png" />
 </p>
 
 #### SUB
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/SUB.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/SUB.png" />
 </p>
 
 #### JMP
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/JMP.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/JMP.png" />
 </p>
 
 
 #### SUB após o JMP
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/SUB_apos_JMP.png" />
+  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/images/SUB_apos_JMP.png" />
 </p>
