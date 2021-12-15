@@ -100,26 +100,33 @@ Programa teste (arquivo: rom.vhd):
 
 # Resultados
 
+### Init Regs + BEQ (not taken)
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initRegs_BEQ_not_taken.png" />
 </p>
 
+### ADD
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/ADD.png" />
 </p>
 
+### BEQ (taken)
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/BEQ_taken.png" />
 </p>
 
+### SUB
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/SUB.png" />
 </p>
 
+### JMP
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/JMP.png" />
 </p>
 
+
+### SUB após o JMP
 <p align="center">
   <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/SUB_apos_JMP.png" />
 </p>
