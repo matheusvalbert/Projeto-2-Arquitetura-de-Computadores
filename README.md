@@ -53,25 +53,25 @@ O estado initReg é utilizado para inicializar os registradores, pois não exist
 - Inicializar registrador:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initReg.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/initReg.png" />
 </p>
 
 - Tipo R:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoR_sig.png" />
 </p>
 
 - Tipo BEQ:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoBEQ_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoBEQ_sig.png" />
 </p>
 
 - Tipo JMP:
 
 <p align="center">
-  <img src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJMP_sig.png" />
+  <img width="60%" src="https://github.com/matheusvalbert/Projeto-2-Arquitetura-de-Computadores/blob/main/tipoJMP_sig.png" />
 </p>
 
 # Testes realizados
